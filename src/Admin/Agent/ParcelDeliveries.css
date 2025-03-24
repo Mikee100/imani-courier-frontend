@@ -1,0 +1,80 @@
+/* Main container */
+.parcel-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Loading state */
+  .loading {
+    font-size: 18px;
+    color: #ff9800;
+  }
+  
+  /* No parcels found */
+  .no-parcels {
+    font-size: 18px;
+    color: #d32f2f;
+  }
+  
+  /* Parcel cards */
+  .parcel-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  /* Parcel details */
+  .parcel-info p {
+    margin: 5px 0;
+  }
+  
+  /* Progress bar container */
+  .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  /* Progress step */
+  .progress-step {
+    width: 25%;
+    padding: 10px;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+    border-bottom: 4px solid lightgray;
+    transition: 0.3s;
+  }
+  
+  /* Active status step */
+  .progress-step.active {
+    color: #4caf50;
+    font-weight: bold;
+    border-bottom: 4px solid #4caf50;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .parcel-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .progress-step {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  
