@@ -65,6 +65,150 @@
     border-bottom: 4px solid #4caf50;
   }
   
+  /* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.modal-close-btn:hover {
+  color: #4b5563;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close-button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #2563eb;
+}
+
+/* Detail Sections */
+.detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.detail-section h4 {
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.detail-section .icon {
+  margin-right: 0.5rem;
+  color: #3b82f6;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #4b5563;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  color: #111827;
+}
+
+/* Status Badges */
+.status-registered {
+  color: #3b82f6;
+  background-color: #dbeafe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-released {
+  color: #f59e0b;
+  background-color: #fef3c7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-in-transit {
+  color: #10b981;
+  background-color: #d1fae5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-out-for-delivery {
+  color: #8b5cf6;
+  background-color: #ede9fe;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-delivered {
+  color: #ec4899;
+  background-color: #fce7f3;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
   /* Responsive design */
   @media (max-width: 768px) {
     .parcel-container {
