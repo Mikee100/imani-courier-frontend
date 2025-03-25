@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { FaBars, FaBox, FaClipboardCheck, FaTruck, FaSignOutAlt } from "react-icons/fa";
 import ReleasedItemsPage from "./ReleasedItemsPage";
+import { AuthContext } from "../../General/AuthContext";
+import { useNavigate } from "react-router";
+
 
 export default function AgentDeliveryDashboard() {
   const [activeSection, setActiveSection] = useState("releaseditems");
+ const { logout } = useContext(AuthContext);
+
+ const handleLogout = () => {
+  const navigate = useNavigate();
+  sessionStorage.removeItem("UserEmail");
+  logout();
+
+  navigate("/login");
+
+};
 
   return (
     <div className="flex mt-18 h-screen bg-gray-100">
@@ -20,7 +33,7 @@ export default function AgentDeliveryDashboard() {
             <FaBox className="mr-3" /> Released Items
           </li>
         
-          <li className="flex items-center p-2 rounded-lg cursor-pointer hover:bg-red-400 text-red-600 mt-10">
+          <li onClick={handleLogout} className="flex items-center p-2 rounded-lg cursor-pointer hover:bg-red-400 text-red-600 mt-10">
             <FaSignOutAlt className="mr-3" /> Logout
           </li>
         </ul>
